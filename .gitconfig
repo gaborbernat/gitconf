@@ -45,6 +45,7 @@
 	enabled = true
 [merge]
   istat = true
+	tool = meld
 [alias]
   a = add
   aa = add --all
