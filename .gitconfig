@@ -108,3 +108,8 @@
   wd = diff --word-diff="color"
   wdc = diff --word-diff="color" --cached
   push = push --tags
+[tig]
+   line-graphics = yes      # Disable graphics characters
+  tab-size = 2            # Number of spaces per tab
+  split-view-width=75%
+  wrap-lines=true
