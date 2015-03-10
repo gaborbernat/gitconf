@@ -45,7 +45,7 @@
 	enabled = true
 [merge]
   istat = true
-	tool = meld
+	tool = kdiff3
 [alias]
   a = add
   aa = add --all
