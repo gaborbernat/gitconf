@@ -71,6 +71,7 @@
   delete-branch = !sh -c 'git push origin :refs/heads/$1 && git remote prune origin && git branch -D $1' -
   div = divergence
   dt = difftool
+  dm = difftool -t meld
   h = help
   irb = rebase --interactive
   l = "!git log --graph --pretty='tformat:%C(yellow)%h{%C(green)%ar{%C(bold blue)%an{%C(red)%d%C(reset) %s' $* | column -t -s '{' | less -FXRS"
