@@ -1,5 +1,5 @@
 [user]
-	name = Gabor Bernat
+  name = Gabor Bernat
 	email = gabor.bernat@gravityrd.com
 [pager]
   color = true
@@ -114,3 +114,13 @@
   tab-size = 2            # Number of spaces per tab
   split-view-width=75%
   wrap-lines=true
+[sendemail]
+  from = Gábor Bernát <bernat@primeranks.net>
+  smtpserver = smtp.gmail.com
+  smtpuser = jokerjokerer@gmail.com
+  smtppass = slozjbnuacpyvncf
+  smtpencryption = tls
+  chainreplyto = false
+  smtpserverport = 587
+	confirm = always
+
