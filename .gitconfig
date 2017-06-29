@@ -41,11 +41,13 @@
   whitespace = trailing-space,space-before-tab
   pager = less -FXR
   editor = vim -pc ':normal gg'
+	excludesfile = /home/bernat/.gitignore
 
 [diff]
   renames = copies
   algorithm = histogram
   mnemonicprefix = true
+	tool = meld
 
 [difftool]
   prompt = false
@@ -85,7 +87,7 @@
   delete-branch = !sh -c 'git push origin :refs/heads/$1 && git remote prune origin && git branch -D $1' -
   div = divergence
   dt = difftool
-  dm = difftool -t meld
+  dm = difftool --dir-diff -t meld
   h = help
   irb = rebase --interactive
   l = "!git log --graph --pretty='tformat:%C(yellow)%h{%C(green)%ar{%C(bold blue)%an{%C(red)%d%C(reset) %s' -10 $*| column -t -s '{' | less -FXRS "
@@ -111,7 +113,6 @@
   rbc = rebase --continue
   rbs = rebase --skip
   rh = reset --hard
-  ru = remote update --prune
   s = status --short --branch
   sl = shortlog
   sm = submodule
@@ -125,12 +126,14 @@
   wdc = diff --word-diff="color" --cached
   push = push --tags
   rv = remote -v
-  fa = fetch --all
+  fa = fetch --all --prune
+  rbu = rebase upstream/master 
+  psu = push --set-upstream
 
 [tig]
-  line-graphics = yes  # Disable graphics characters
+  line-graphics = yes
   tab-size = 2  # Number of spaces per tab
-  split-view-width=75%
+  split-view-width=70%
   wrap-lines=true
 
 [grep]
@@ -138,4 +141,4 @@
   patternType = perl
 
 [credential]
-  helper = cache
+	helper = cache --timeout=100000
