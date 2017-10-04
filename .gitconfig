@@ -1,6 +1,7 @@
 [user]
   name = Bernat Gabor
   email = bgabor8@bloomberg.net
+	signingkey = B0091328FC144597
 
 [pager]
   color = true
@@ -142,3 +143,5 @@
 
 [credential]
 	helper = cache --timeout=100000
+[commit]
+	gpgsign = true
