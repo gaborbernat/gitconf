@@ -42,7 +42,7 @@
   whitespace = trailing-space,space-before-tab
   pager = less -FXR
   editor = vim -pc ':normal gg'
-	excludesfile = /home/bernat/.gitignore
+	excludesfile = /home/bernat/.gitignore_global
 
 [diff]
   renames = copies
@@ -130,6 +130,8 @@
   fa = fetch --all --prune
   rbu = rebase upstream/master 
   psu = push --set-upstream
+  cop = !sh -c 'git fetch upstream pull/$1/head:$2  && git checkout $2' -
+  copo = !sh -c 'git fetch origin pull/$1/head:$2  && git checkout $2' -
 
 [tig]
   line-graphics = yes
@@ -142,6 +144,7 @@
   patternType = perl
 
 [credential]
-	helper = cache --timeout=100000
+      helper = store --file ~/.git-credentials
+      helper = cache --timeout 30000
 [commit]
 	gpgsign = true
